@@ -8,8 +8,18 @@ import 'jquery.inputmask';
 import 'inputmask.phone.extensions';
 import 'jquery-ui/ui/widgets/autocomplete';
 import 'bootstrap';
+import codes from 'inputmask.phone.codes';
 
 $(function () {
+    var sortedCodes = codes
+        .sort(function (a, b) {
+            return (a.mask || a) < (b.mask || b) ? -1 : 1;
+        })
+        .map(function (a) {
+            a.mask = a.mask.replace(/#/g, "9") ;
+            return a;
+        });
+
     $("#profession").autocomplete({
         source: [
             "Автомеханик",
@@ -23,7 +33,8 @@ $(function () {
     });
 
     $("#phone").inputmask("phone", {
-        url: "node_modules/jquery.inputmask/extra/phone-codes/phone-codes.js"
+        url: "codes",
+        phoneCodeCache: {codes: sortedCodes}
     });
 
     $(".dropdown-menu li a").click(function () {

@@ -16,7 +16,8 @@ module.exports = {
             'inputmask.dependencyLib': _path('node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery'),
             'inputmask' : _path('node_modules/jquery.inputmask/dist/inputmask/inputmask'),
             'jquery.inputmask': _path('node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask'),
-            'inputmask.phone.extensions': _path('node_modules/jquery.inputmask/dist/inputmask/inputmask.phone.extensions')
+            'inputmask.phone.extensions': _path('node_modules/jquery.inputmask/dist/inputmask/inputmask.phone.extensions'),
+            'inputmask.phone.codes': _path('node_modules/jquery.inputmask/extra/phone-codes/phone-codes.js')
         }
     },
 
@@ -55,6 +56,10 @@ module.exports = {
             {
                 test: /\.eot$/,
                 loader: 'file-loader'
+            },
+            {
+                test: /phone-codes\.js$/,
+                loader: 'json-loader'
             }
         ]
     },
