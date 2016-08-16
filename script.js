@@ -41,7 +41,7 @@ $(function () {
         var $liIcon = $(this).find(".flag-icon");
         var $btnIcon = $(".btn").find(".flag-icon");
 
-        $btnIcon.attr("class", $liIcon.attr("class"))
+        $btnIcon.attr("class", $liIcon.attr("class"));
         $("#phone").val($(this).data("code"))
     }).filter(".selected").click();
 });
