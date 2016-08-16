@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="dist/main.js"></script>
+</head>
+<body>
+<form style="margin: 20px">
+    <div class="row">
+        <div class="col-sm-4">
+            <p class="text-center"><strong>Зарегистрируйтесь</strong> и начните продавать услучи через интернет сегодня</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="first-name">ИМЯ</label>
+                <input name="firstName" id="first-name" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="second-name">ФАМИЛИЯ</label>
+                <input name="secondName" id="second-name" class="form-control" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="profession">ПРОФЕССИЯ</label>
+                <input name="profession" id="profession" class="form-control" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="phone">ТЕЛЕФОН</label>
+
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-code="+44"><span class="flag-icon flag-icon-gb"></span> Англия</a></li>
+                            <li><a href="#" data-code="+49("><span class="flag-icon flag-icon-de"></span> Германия</a></li>
+                            <li><a href="#" data-code="+7" class="selected"><span class="flag-icon flag-icon-ru"></span> Россия</a></li>
+                            <li><a href="#" data-code="+1"><span class="flag-icon flag-icon-us"></span> США</a></li>
+                            <li><a href="#" data-code="+33"><span class="flag-icon flag-icon-fr"></span> Франция</a></li>
+                        </ul>
+                    </div>
+
+                    <input name="phone" id="phone" class="form-control" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary center-block">Зарегистрироваться</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
